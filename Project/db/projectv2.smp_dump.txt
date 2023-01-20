@@ -1,0 +1,71 @@
+
+State Machine - |projectv2|x_or_next_state
+Name x_or_next_state.x_or2_S3 x_or_next_state.x_or2_S2 x_or_next_state.x_or2_S1 x_or_next_state.x_or2_S0 x_or_next_state.x_or2_S4 
+x_or_next_state.x_or2_S0 0 0 0 0 0 
+x_or_next_state.x_or2_S1 0 0 1 1 0 
+x_or_next_state.x_or2_S2 0 1 0 1 0 
+x_or_next_state.x_or2_S3 1 0 0 1 0 
+x_or_next_state.x_or2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|x_or_current_state
+Name x_or_current_state.x_or2_S3 x_or_current_state.x_or2_S2 x_or_current_state.x_or2_S1 x_or_current_state.x_or2_S0 x_or_current_state.x_or2_S4 
+x_or_current_state.x_or2_S0 0 0 0 0 0 
+x_or_current_state.x_or2_S1 0 0 1 1 0 
+x_or_current_state.x_or2_S2 0 1 0 1 0 
+x_or_current_state.x_or2_S3 1 0 0 1 0 
+x_or_current_state.x_or2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|add_next_state
+Name add_next_state.add2_S3 add_next_state.add2_S2 add_next_state.add2_S1 add_next_state.add2_S0 add_next_state.add2_S4 
+add_next_state.add2_S0 0 0 0 0 0 
+add_next_state.add2_S1 0 0 1 1 0 
+add_next_state.add2_S2 0 1 0 1 0 
+add_next_state.add2_S3 1 0 0 1 0 
+add_next_state.add2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|add_current_state
+Name add_current_state.add2_S3 add_current_state.add2_S2 add_current_state.add2_S1 add_current_state.add2_S0 add_current_state.add2_S4 
+add_current_state.add2_S0 0 0 0 0 0 
+add_current_state.add2_S1 0 0 1 1 0 
+add_current_state.add2_S2 0 1 0 1 0 
+add_current_state.add2_S3 1 0 0 1 0 
+add_current_state.add2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|nand_next_state
+Name nand_next_state.nand2_S3 nand_next_state.nand2_S2 nand_next_state.nand2_S1 nand_next_state.nand2_S0 nand_next_state.nand2_S4 
+nand_next_state.nand2_S0 0 0 0 0 0 
+nand_next_state.nand2_S1 0 0 1 1 0 
+nand_next_state.nand2_S2 0 1 0 1 0 
+nand_next_state.nand2_S3 1 0 0 1 0 
+nand_next_state.nand2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|nand_current_state
+Name nand_current_state.nand2_S3 nand_current_state.nand2_S2 nand_current_state.nand2_S1 nand_current_state.nand2_S0 nand_current_state.nand2_S4 
+nand_current_state.nand2_S0 0 0 0 0 0 
+nand_current_state.nand2_S1 0 0 1 1 0 
+nand_current_state.nand2_S2 0 1 0 1 0 
+nand_current_state.nand2_S3 1 0 0 1 0 
+nand_current_state.nand2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|sub_next_state
+Name sub_next_state.sub2_S3 sub_next_state.sub2_S2 sub_next_state.sub2_S1 sub_next_state.sub2_S0 sub_next_state.sub2_S4 
+sub_next_state.sub2_S0 0 0 0 0 0 
+sub_next_state.sub2_S1 0 0 1 1 0 
+sub_next_state.sub2_S2 0 1 0 1 0 
+sub_next_state.sub2_S3 1 0 0 1 0 
+sub_next_state.sub2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|sub_current_state
+Name sub_current_state.sub2_S3 sub_current_state.sub2_S2 sub_current_state.sub2_S1 sub_current_state.sub2_S0 sub_current_state.sub2_S4 
+sub_current_state.sub2_S0 0 0 0 0 0 
+sub_current_state.sub2_S1 0 0 1 1 0 
+sub_current_state.sub2_S2 0 1 0 1 0 
+sub_current_state.sub2_S3 1 0 0 1 0 
+sub_current_state.sub2_S4 0 0 0 1 1 
+
+State Machine - |projectv2|current_state
+Name current_state.do_nand current_state.do_sub current_state.do_x_or current_state.do_add 
+current_state.do_x_or 0 0 0 0 
+current_state.do_sub 0 1 1 0 
+current_state.do_nand 1 0 1 0 
+current_state.do_add 0 0 1 1 

@@ -1,0 +1,540 @@
+Analysis & Synthesis report for projectv2
+Fri Dec 16 23:56:43 2022
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |projectv2|x_or_next_state
+  8. State Machine - |projectv2|x_or_current_state
+  9. State Machine - |projectv2|add_next_state
+ 10. State Machine - |projectv2|add_current_state
+ 11. State Machine - |projectv2|nand_next_state
+ 12. State Machine - |projectv2|nand_current_state
+ 13. State Machine - |projectv2|sub_next_state
+ 14. State Machine - |projectv2|sub_current_state
+ 15. State Machine - |projectv2|current_state
+ 16. User-Specified and Inferred Latches
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Parameter Settings for User Entity Instance: Top-level Entity: |projectv2
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Dec 16 23:56:43 2022   ;
+; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name               ; projectv2                               ;
+; Top-level Entity Name       ; projectv2                               ;
+; Family                      ; FLEX10KE                                ;
+; Total logic elements        ; 133                                     ;
+; Total pins                  ; 19                                      ;
+; Total memory bits           ; 0                                       ;
+; Total PLLs                  ; 0                                       ;
++-----------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                 ;
++----------------------------------------------------------------+--------------+---------------+
+; Option                                                         ; Setting      ; Default Value ;
++----------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                          ; projectv2    ; projectv2     ;
+; Family name                                                    ; FLEX10KE     ; Stratix II    ;
+; Type of Retiming Performed During Resynthesis                  ; Full         ;               ;
+; Resynthesis Optimization Effort                                ; Normal       ;               ;
+; Physical Synthesis Level for Resynthesis                       ; Normal       ;               ;
+; Use Generated Physical Constraints File                        ; On           ;               ;
+; Use smart compilation                                          ; Off          ; Off           ;
+; Create Debugging Nodes for IP Cores                            ; Off          ; Off           ;
+; Preserve fewer node names                                      ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                      ; Off          ; Off           ;
+; Verilog Version                                                ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                   ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                       ; Auto         ; Auto          ;
+; Safe State Machine                                             ; Off          ; Off           ;
+; Extract Verilog State Machines                                 ; On           ; On            ;
+; Extract VHDL State Machines                                    ; On           ; On            ;
+; Ignore Verilog initial constructs                              ; Off          ; Off           ;
+; Iteration limit for constant Verilog loops                     ; 5000         ; 5000          ;
+; Iteration limit for non-constant Verilog loops                 ; 250          ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On           ; On            ;
+; Parallel Synthesis                                             ; Off          ; Off           ;
+; NOT Gate Push-Back                                             ; On           ; On            ;
+; Power-Up Don't Care                                            ; On           ; On            ;
+; Remove Redundant Logic Cells                                   ; Off          ; Off           ;
+; Remove Duplicate Registers                                     ; On           ; On            ;
+; Ignore CARRY Buffers                                           ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                         ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                      ; Off          ; Off           ;
+; Ignore LCELL Buffers                                           ; Off          ; Off           ;
+; Ignore SOFT Buffers                                            ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                 ; Off          ; Off           ;
+; Auto Implement in ROM                                          ; Off          ; Off           ;
+; Optimization Technique                                         ; Area         ; Area          ;
+; Carry Chain Length                                             ; 32           ; 32            ;
+; Cascade Chain Length                                           ; 2            ; 2             ;
+; Auto Carry Chains                                              ; On           ; On            ;
+; Auto Open-Drain Pins                                           ; On           ; On            ;
+; Auto ROM Replacement                                           ; On           ; On            ;
+; Auto RAM Replacement                                           ; On           ; On            ;
+; Auto Clock Enable Replacement                                  ; On           ; On            ;
+; Strict RAM Replacement                                         ; Off          ; Off           ;
+; Auto Resource Sharing                                          ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                             ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                             ; Off          ; Off           ;
+; Use LogicLock Constraints during Resource Balancing            ; On           ; On            ;
+; Ignore translate_off and synthesis_off directives              ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report             ; On           ; On            ;
+; HDL message level                                              ; Level2       ; Level2        ;
+; Suppress Register Optimization Related Messages                ; Off          ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100          ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100          ; 100           ;
+; Block Design Naming                                            ; Auto         ; Auto          ;
+; Synthesis Effort                                               ; Auto         ; Auto          ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On           ; On            ;
+; Analysis & Synthesis Message Level                             ; Medium       ; Medium        ;
++----------------------------------------------------------------+--------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+
+; projectv2.v                      ; yes             ; Auto-Found Verilog HDL File  ; D:/BracU/Semester 10 (CSE460,CSE461,CSE423,BUS201)/CSE460/projectv2/projectv2.v ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------------+------------+
+; Resource                       ; Usage      ;
++--------------------------------+------------+
+; Total logic elements           ; 133        ;
+; Total combinational functions  ; 133        ;
+;     -- Total 4-input functions ; 49         ;
+;     -- Total 3-input functions ; 72         ;
+;     -- Total 2-input functions ; 12         ;
+;     -- Total 1-input functions ; 0          ;
+;     -- Total 0-input functions ; 0          ;
+; Total registers                ; 44         ;
+; I/O pins                       ; 19         ;
+; Maximum fan-out node           ; clk        ;
+; Maximum fan-out                ; 44         ;
+; Total fan-out                  ; 493        ;
+; Average fan-out                ; 3.24       ;
++--------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |projectv2                 ; 133 (133)   ; 44           ; 0           ; 19   ; 89 (89)      ; 0 (0)             ; 44 (44)          ; 0 (0)           ; 0 (0)      ; |projectv2          ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|x_or_next_state                                                                                                                      ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+; Name                     ; x_or_next_state.x_or2_S3 ; x_or_next_state.x_or2_S2 ; x_or_next_state.x_or2_S1 ; x_or_next_state.x_or2_S0 ; x_or_next_state.x_or2_S4 ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+; x_or_next_state.x_or2_S0 ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ;
+; x_or_next_state.x_or2_S1 ; 0                        ; 0                        ; 1                        ; 1                        ; 0                        ;
+; x_or_next_state.x_or2_S2 ; 0                        ; 1                        ; 0                        ; 1                        ; 0                        ;
+; x_or_next_state.x_or2_S3 ; 1                        ; 0                        ; 0                        ; 1                        ; 0                        ;
+; x_or_next_state.x_or2_S4 ; 0                        ; 0                        ; 0                        ; 1                        ; 1                        ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|x_or_current_state                                                                                                                                     ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+; Name                        ; x_or_current_state.x_or2_S3 ; x_or_current_state.x_or2_S2 ; x_or_current_state.x_or2_S1 ; x_or_current_state.x_or2_S0 ; x_or_current_state.x_or2_S4 ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+; x_or_current_state.x_or2_S0 ; 0                           ; 0                           ; 0                           ; 0                           ; 0                           ;
+; x_or_current_state.x_or2_S1 ; 0                           ; 0                           ; 1                           ; 1                           ; 0                           ;
+; x_or_current_state.x_or2_S2 ; 0                           ; 1                           ; 0                           ; 1                           ; 0                           ;
+; x_or_current_state.x_or2_S3 ; 1                           ; 0                           ; 0                           ; 1                           ; 0                           ;
+; x_or_current_state.x_or2_S4 ; 0                           ; 0                           ; 0                           ; 1                           ; 1                           ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|add_next_state                                                                                                           ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                   ; add_next_state.add2_S3 ; add_next_state.add2_S2 ; add_next_state.add2_S1 ; add_next_state.add2_S0 ; add_next_state.add2_S4 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; add_next_state.add2_S0 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; add_next_state.add2_S1 ; 0                      ; 0                      ; 1                      ; 1                      ; 0                      ;
+; add_next_state.add2_S2 ; 0                      ; 1                      ; 0                      ; 1                      ; 0                      ;
+; add_next_state.add2_S3 ; 1                      ; 0                      ; 0                      ; 1                      ; 0                      ;
+; add_next_state.add2_S4 ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|add_current_state                                                                                                                          ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; add_current_state.add2_S3 ; add_current_state.add2_S2 ; add_current_state.add2_S1 ; add_current_state.add2_S0 ; add_current_state.add2_S4 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; add_current_state.add2_S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; add_current_state.add2_S1 ; 0                         ; 0                         ; 1                         ; 1                         ; 0                         ;
+; add_current_state.add2_S2 ; 0                         ; 1                         ; 0                         ; 1                         ; 0                         ;
+; add_current_state.add2_S3 ; 1                         ; 0                         ; 0                         ; 1                         ; 0                         ;
+; add_current_state.add2_S4 ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|nand_next_state                                                                                                                      ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+; Name                     ; nand_next_state.nand2_S3 ; nand_next_state.nand2_S2 ; nand_next_state.nand2_S1 ; nand_next_state.nand2_S0 ; nand_next_state.nand2_S4 ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+; nand_next_state.nand2_S0 ; 0                        ; 0                        ; 0                        ; 0                        ; 0                        ;
+; nand_next_state.nand2_S1 ; 0                        ; 0                        ; 1                        ; 1                        ; 0                        ;
+; nand_next_state.nand2_S2 ; 0                        ; 1                        ; 0                        ; 1                        ; 0                        ;
+; nand_next_state.nand2_S3 ; 1                        ; 0                        ; 0                        ; 1                        ; 0                        ;
+; nand_next_state.nand2_S4 ; 0                        ; 0                        ; 0                        ; 1                        ; 1                        ;
++--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+--------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|nand_current_state                                                                                                                                     ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+; Name                        ; nand_current_state.nand2_S3 ; nand_current_state.nand2_S2 ; nand_current_state.nand2_S1 ; nand_current_state.nand2_S0 ; nand_current_state.nand2_S4 ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+; nand_current_state.nand2_S0 ; 0                           ; 0                           ; 0                           ; 0                           ; 0                           ;
+; nand_current_state.nand2_S1 ; 0                           ; 0                           ; 1                           ; 1                           ; 0                           ;
+; nand_current_state.nand2_S2 ; 0                           ; 1                           ; 0                           ; 1                           ; 0                           ;
+; nand_current_state.nand2_S3 ; 1                           ; 0                           ; 0                           ; 1                           ; 0                           ;
+; nand_current_state.nand2_S4 ; 0                           ; 0                           ; 0                           ; 1                           ; 1                           ;
++-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|sub_next_state                                                                                                           ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                   ; sub_next_state.sub2_S3 ; sub_next_state.sub2_S2 ; sub_next_state.sub2_S1 ; sub_next_state.sub2_S0 ; sub_next_state.sub2_S4 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; sub_next_state.sub2_S0 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; sub_next_state.sub2_S1 ; 0                      ; 0                      ; 1                      ; 1                      ; 0                      ;
+; sub_next_state.sub2_S2 ; 0                      ; 1                      ; 0                      ; 1                      ; 0                      ;
+; sub_next_state.sub2_S3 ; 1                      ; 0                      ; 0                      ; 1                      ; 0                      ;
+; sub_next_state.sub2_S4 ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|sub_current_state                                                                                                                          ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; sub_current_state.sub2_S3 ; sub_current_state.sub2_S2 ; sub_current_state.sub2_S1 ; sub_current_state.sub2_S0 ; sub_current_state.sub2_S4 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; sub_current_state.sub2_S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; sub_current_state.sub2_S1 ; 0                         ; 0                         ; 1                         ; 1                         ; 0                         ;
+; sub_current_state.sub2_S2 ; 0                         ; 1                         ; 0                         ; 1                         ; 0                         ;
+; sub_current_state.sub2_S3 ; 1                         ; 0                         ; 0                         ; 1                         ; 0                         ;
+; sub_current_state.sub2_S4 ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |projectv2|current_state                                                                            ;
++-----------------------+-----------------------+----------------------+-----------------------+----------------------+
+; Name                  ; current_state.do_nand ; current_state.do_sub ; current_state.do_x_or ; current_state.do_add ;
++-----------------------+-----------------------+----------------------+-----------------------+----------------------+
+; current_state.do_x_or ; 0                     ; 0                    ; 0                     ; 0                    ;
+; current_state.do_sub  ; 0                     ; 1                    ; 1                     ; 0                    ;
+; current_state.do_nand ; 1                     ; 0                    ; 1                     ; 0                    ;
+; current_state.do_add  ; 0                     ; 0                    ; 1                     ; 1                    ;
++-----------------------+-----------------------+----------------------+-----------------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; C[0]$latch                                          ; C[0]~45             ; yes                    ;
+; C[1]$latch                                          ; C[1]~30             ; yes                    ;
+; C[2]$latch                                          ; C[2]~16             ; yes                    ;
+; C[3]$latch                                          ; C[3]~3              ; yes                    ;
+; Carry$latch                                         ; Carry~0             ; yes                    ;
+; Sign$latch                                          ; C[3]~3              ; yes                    ;
+; Zero$latch                                          ; C[3]~3              ; yes                    ;
+; temp[0]                                             ; C[0]~25             ; yes                    ;
+; tmp[1]                                              ; tmp[1]~0            ; yes                    ;
+; temp2[0]                                            ; C[1]~44             ; yes                    ;
+; tmp2[1]                                             ; tmp2[1]~0           ; yes                    ;
+; temp3[0]                                            ; C[2]~29             ; yes                    ;
+; tmp3[1]                                             ; tmp3[1]~0           ; yes                    ;
+; temp3[1]                                            ; C[2]~29             ; yes                    ;
+; temp2[1]                                            ; C[1]~44             ; yes                    ;
+; temp[1]                                             ; C[0]~25             ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; x_or_next_state~15                     ; Lost fanout        ;
+; x_or_next_state~16                     ; Lost fanout        ;
+; x_or_current_state~15                  ; Lost fanout        ;
+; x_or_current_state~16                  ; Lost fanout        ;
+; add_next_state~15                      ; Lost fanout        ;
+; add_next_state~16                      ; Lost fanout        ;
+; add_current_state~15                   ; Lost fanout        ;
+; add_current_state~16                   ; Lost fanout        ;
+; nand_next_state~15                     ; Lost fanout        ;
+; nand_next_state~16                     ; Lost fanout        ;
+; nand_current_state~15                  ; Lost fanout        ;
+; nand_current_state~16                  ; Lost fanout        ;
+; sub_next_state~15                      ; Lost fanout        ;
+; sub_next_state~16                      ; Lost fanout        ;
+; sub_current_state~15                   ; Lost fanout        ;
+; sub_current_state~16                   ; Lost fanout        ;
+; current_state~42                       ; Lost fanout        ;
+; current_state~43                       ; Lost fanout        ;
+; Total Number of Removed Registers = 18 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 44    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |projectv2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; do_reset       ; 000   ; Unsigned Binary                                  ;
+; do_x_or        ; 001   ; Unsigned Binary                                  ;
+; do_sub         ; 010   ; Unsigned Binary                                  ;
+; do_nand        ; 011   ; Unsigned Binary                                  ;
+; do_add         ; 100   ; Unsigned Binary                                  ;
+; sub2_S0        ; 000   ; Unsigned Binary                                  ;
+; sub2_S1        ; 001   ; Unsigned Binary                                  ;
+; sub2_S2        ; 010   ; Unsigned Binary                                  ;
+; sub2_S3        ; 011   ; Unsigned Binary                                  ;
+; sub2_S4        ; 100   ; Unsigned Binary                                  ;
+; nand2_S0       ; 000   ; Unsigned Binary                                  ;
+; nand2_S1       ; 001   ; Unsigned Binary                                  ;
+; nand2_S2       ; 010   ; Unsigned Binary                                  ;
+; nand2_S3       ; 011   ; Unsigned Binary                                  ;
+; nand2_S4       ; 100   ; Unsigned Binary                                  ;
+; add2_S0        ; 000   ; Unsigned Binary                                  ;
+; add2_S1        ; 001   ; Unsigned Binary                                  ;
+; add2_S2        ; 010   ; Unsigned Binary                                  ;
+; add2_S3        ; 011   ; Unsigned Binary                                  ;
+; add2_S4        ; 100   ; Unsigned Binary                                  ;
+; x_or2_S0       ; 000   ; Unsigned Binary                                  ;
+; x_or2_S1       ; 001   ; Unsigned Binary                                  ;
+; x_or2_S2       ; 010   ; Unsigned Binary                                  ;
+; x_or2_S3       ; 011   ; Unsigned Binary                                  ;
+; x_or2_S4       ; 100   ; Unsigned Binary                                  ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Fri Dec 16 23:56:43 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectv2 -c projectv2
+Warning: EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning: EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning: EDA synthesis tool is specified as "Custom", but GND is not specified
+Warning: Using design file projectv2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: projectv2
+Info: Elaborating entity "projectv2" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(84): variable "sub_current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(88): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(88): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(94): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(94): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(94): variable "temp" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(100): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(100): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(100): variable "temp2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(106): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(106): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(106): variable "temp3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at projectv2.v(109): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at projectv2.v(110): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at projectv2.v(84): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at projectv2.v(84): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(114): variable "nand_current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(118): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(118): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(123): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(123): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(128): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(128): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(133): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(133): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at projectv2.v(135): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at projectv2.v(136): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at projectv2.v(114): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at projectv2.v(114): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(141): variable "add_current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(145): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(145): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(151): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(151): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(151): variable "tmp" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(157): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(157): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(157): variable "tmp2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(163): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(163): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(163): variable "tmp3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at projectv2.v(166): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at projectv2.v(167): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at projectv2.v(141): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at projectv2.v(141): all case item expressions in this case statement are onehot
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(172): variable "x_or_current_state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(176): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(176): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(181): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(181): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(186): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(186): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(191): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at projectv2.v(191): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at projectv2.v(193): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at projectv2.v(194): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at projectv2.v(172): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at projectv2.v(172): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "Carry", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "temp2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "temp3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "temp4", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "Zero", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "Sign", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "tmp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "tmp2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "tmp3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at projectv2.v(81): inferring latch(es) for variable "tmp4", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Sign" at projectv2.v(171)
+Info (10041): Inferred latch for "Zero" at projectv2.v(171)
+Info (10041): Inferred latch for "Carry" at projectv2.v(171)
+Info (10041): Inferred latch for "C[0]" at projectv2.v(171)
+Info (10041): Inferred latch for "C[1]" at projectv2.v(171)
+Info (10041): Inferred latch for "C[2]" at projectv2.v(171)
+Info (10041): Inferred latch for "C[3]" at projectv2.v(171)
+Info (10041): Inferred latch for "tmp3[1]" at projectv2.v(140)
+Info (10041): Inferred latch for "tmp2[1]" at projectv2.v(140)
+Info (10041): Inferred latch for "tmp[1]" at projectv2.v(140)
+Info (10041): Inferred latch for "temp3[0]" at projectv2.v(83)
+Info (10041): Inferred latch for "temp3[1]" at projectv2.v(83)
+Info (10041): Inferred latch for "temp2[0]" at projectv2.v(83)
+Info (10041): Inferred latch for "temp2[1]" at projectv2.v(83)
+Info (10041): Inferred latch for "temp[0]" at projectv2.v(83)
+Info (10041): Inferred latch for "temp[1]" at projectv2.v(83)
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "Sign$latch" merged with LATCH primitive "C[3]$latch"
+Warning: Latch C[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal nand_current_state.nand2_S1
+Warning: Latch C[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal current_state.do_x_or
+Warning: Latch C[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal current_state.do_x_or
+Warning: Latch C[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal current_state.do_x_or
+Warning: Latch Carry$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal current_state.do_x_or
+Warning: Latch Zero$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal current_state.do_x_or
+Info: 18 registers lost all their fanouts during netlist optimizations. The first 18 are displayed below.
+    Info: Register "x_or_next_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "x_or_next_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "x_or_current_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "x_or_current_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "add_next_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "add_next_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "add_current_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "add_current_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "nand_next_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "nand_next_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "nand_current_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "nand_current_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "sub_next_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "sub_next_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "sub_current_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "sub_current_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "current_state~42" lost all its fanouts during netlist optimizations.
+    Info: Register "current_state~43" lost all its fanouts during netlist optimizations.
+Info: Implemented 152 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 7 output pins
+    Info: Implemented 133 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 219 megabytes
+    Info: Processing ended: Fri Dec 16 23:56:43 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
